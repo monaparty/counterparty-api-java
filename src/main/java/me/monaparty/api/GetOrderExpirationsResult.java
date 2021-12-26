@@ -6,8 +6,8 @@ import lombok.Setter;
 @Setter
 @Getter
 public class GetOrderExpirationsResult {
-     private Long order_index;
-     private String order_hash;
-     private String source;
-     private Long block_index;
+    private Long order_index;
+    private String order_hash;
+    private String source;
+    private Long block_index;
 }
