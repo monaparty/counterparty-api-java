@@ -174,6 +174,5 @@ public interface CounterpartyAPI {
             @JsonRpcParam(value = "order_dir") String orderDir, @JsonRpcParam(value = "start_block") Long startBlock,
             @JsonRpcParam(value = "end_block") Long endBlock, @JsonRpcParam(value = "status") String status,
             @JsonRpcParam(value = "limit") Long limit, @JsonRpcParam(value = "offset") Long offset);
-        
-        
+
 }
