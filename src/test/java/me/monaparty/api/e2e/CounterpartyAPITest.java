@@ -140,7 +140,7 @@ public class CounterpartyAPITest {
     
     }
 
-    @Test
+    //@Test
     public void getBetMatchExpirations1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBetMatchExpirations(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
@@ -153,7 +153,7 @@ public class CounterpartyAPITest {
         assertEquals(Long.valueOf(0L), result.getBlockIndex());
     }
 
-    @Test
+    //@Test
     public void getBetMatchResolutions1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBetMatchResolutions(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
@@ -189,7 +189,7 @@ public class CounterpartyAPITest {
         assertEquals("valid", result.getStatus());
     }
 
-    @Test
+    //@Test
     public void getBTCPays1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBTCPays(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
@@ -266,7 +266,7 @@ public class CounterpartyAPITest {
         assertEquals("5f100357e841146ad7ee51cbc4db298c3d7f5f365ba8a0fed93ec9bf45d527fe", result.getEvent());
     }
 
-    @Test
+    //@Test
     public void getDestructions1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getDestructions(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
@@ -371,9 +371,8 @@ public class CounterpartyAPITest {
         assertEquals(null, result.getAssetLongname());
     }
 
-    @Test
+    //@Test
     public void getMempool1() throws Exception {
-        try {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getMempool(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
         assertEquals(1, results.size());
@@ -383,7 +382,7 @@ public class CounterpartyAPITest {
         assertEquals("", result.getCategory());
         assertEquals("", result.getBindings());
         assertEquals(Long.valueOf(0L), result.getTimestamp());
-        } catch (Throwable t) { t.printStackTrace(); throw t; }    }
+    }
 
     @Test
     public void getMessages1() throws Exception {
@@ -482,7 +481,7 @@ public class CounterpartyAPITest {
         } catch (Throwable t) { t.printStackTrace(); throw t; }
     }
 
-    @Test
+    //@Test
     public void getRps1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRps(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
@@ -501,7 +500,7 @@ public class CounterpartyAPITest {
         assertEquals("", result.getStatus());
     }
 
-    @Test
+    //@Test
     public void getRpsExpirations1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRpsExpirations(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
@@ -514,7 +513,7 @@ public class CounterpartyAPITest {
         assertEquals(Long.valueOf(0L),result.getBlockIndex());
     }
 
-    @Test
+    //@Test
     public void getRpsMatches1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRpsMatches(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
@@ -541,7 +540,7 @@ public class CounterpartyAPITest {
         assertEquals("", result.getStatus());
         }
 
-    @Test
+    //@Test
     public void getRpsMatchExpirations1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRpsMatchExpirations(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
@@ -554,7 +553,7 @@ public class CounterpartyAPITest {
         assertEquals(Long.valueOf(0L),result.getBlockIndex());
         }
 
-    @Test
+    //@Test
     public void getRpsResolves1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRpsResolves(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
