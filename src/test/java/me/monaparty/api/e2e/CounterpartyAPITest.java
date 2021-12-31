@@ -47,7 +47,7 @@ public class CounterpartyAPITest {
     public void getAssets1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getAssets(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(results.size(), 1);
+        assertEquals(1, results.size());
         var result = results.get(0);
         assertEquals("85011849", result.getAssetId());
         assertEquals("HEAVEN", result.getAssetName());
@@ -60,7 +60,7 @@ public class CounterpartyAPITest {
     public void getBalances1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBalances(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(results.size(), 1);
+        assertEquals(1, results.size());
         var result = results.get(0);
         assertEquals("myMrdd89RXwdS8Quo1ZoFvXShnpMqk4Zi2", result.getAddress());
         assertEquals("XMP", result.getAsset());
@@ -97,47 +97,46 @@ public class CounterpartyAPITest {
     public void getBetExpirations1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBetExpirations(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
-        /* TODO: should be implemented */
 
-        assertEquals(Long.valueOf(0L), result.getBetIndex());
-        assertEquals("", result.getBetHash());
-        assertEquals("", result.getSource());
-        assertEquals(Long.valueOf(0L), result.getBlockIndex());
+        assertEquals(Long.valueOf(2178L), result.getBetIndex());
+        assertEquals("0c82b7b687957f45aaebf727620bced03807637d013df73769260cc2ef4ff692", result.getBetHash());
+        assertEquals("mmTczH2SjuzQLxaombReqCynX8RqUMG6MY", result.getSource());
+        assertEquals(Long.valueOf(1354486L), result.getBlockIndex());
     }
 
     @Test
     public void getBetMatches1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBetMatches(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
-        /* TODO: should be implemented */
-        assertEquals("", result.getId());
-        assertEquals(Long.valueOf(0L), result.getTx0Index());
-        assertEquals("", result.getTx0Hash());
-        assertEquals("", result.getTx0Address());
-        assertEquals(Long.valueOf(0L), result.getTx1Index());
-        assertEquals("", result.getTx1Hash());
-        assertEquals("", result.getTx1Address());
-        assertEquals(Long.valueOf(0L), result.getTx0BetType());
-        assertEquals(Long.valueOf(0L), result.getTx1BetType());
-        assertEquals("", result.getFeedAddress());
-        assertEquals(Long.valueOf(0L), result.getInitialValue());
-        assertEquals(Long.valueOf(0L), result.getDeadline());
-        assertEquals(Double.valueOf(0.0), result.getTargetValue());
-        assertEquals(Long.valueOf(0L), result.getLeverage());
-        assertEquals(Long.valueOf(0L), result.getForwardQuantity());
-        assertEquals(Long.valueOf(0L), result.getBackwardQuantity());
-        assertEquals(Long.valueOf(0L), result.getTx0BlockIndex());
-        assertEquals(Long.valueOf(0L), result.getTx1BlockIndex());
-        assertEquals(Long.valueOf(0L), result.getBlockIndex());
-        assertEquals(Long.valueOf(0L), result.getTx0Expiration());
-        assertEquals(Long.valueOf(0L), result.getTx1Expiration());
-        assertEquals(Long.valueOf(0L), result.getMatchExpireIndex());
-        assertEquals(Long.valueOf(0L), result.getFeeFractionInt());
-        assertEquals("", result.getStatus());
+
+        assertEquals("d62923b9a0f900edf858649a78f8aeb6b8b0e68752afa5690dd4dd728a1fec22_b620bd0ca7bfb82952261e2e82e21e04584c4df2055b7e941d61949c3070e0ad", result.getId());
+        assertEquals(Long.valueOf(2175L), result.getTx0Index());
+        assertEquals("d62923b9a0f900edf858649a78f8aeb6b8b0e68752afa5690dd4dd728a1fec22", result.getTx0Hash());
+        assertEquals("n1MfkjJUtRvAiFjSERmkp5MmYdUCQHCQGc", result.getTx0Address());
+        assertEquals(Long.valueOf(2177L), result.getTx1Index());
+        assertEquals("b620bd0ca7bfb82952261e2e82e21e04584c4df2055b7e941d61949c3070e0ad", result.getTx1Hash());
+        assertEquals("n1MfkjJUtRvAiFjSERmkp5MmYdUCQHCQGc", result.getTx1Address());
+        assertEquals(Long.valueOf(2L), result.getTx0BetType());
+        assertEquals(Long.valueOf(3L), result.getTx1BetType());
+        assertEquals("n2T96WQMsY9jx8dPzczaEub9BGkpGXXs4C", result.getFeedAddress());
+        assertEquals(Long.valueOf(-1L), result.getInitialValue());
+        assertEquals(Long.valueOf(1640973600L), result.getDeadline());
+        assertEquals(Double.valueOf(1.0), result.getTargetValue());
+        assertEquals(Long.valueOf(5040L), result.getLeverage());
+        assertEquals(Long.valueOf(100000000L), result.getForwardQuantity());
+        assertEquals(Long.valueOf(200000000L), result.getBackwardQuantity());
+        assertEquals(Long.valueOf(1354470L), result.getTx0BlockIndex());
+        assertEquals(Long.valueOf(1354473L), result.getTx1BlockIndex());
+        assertEquals(Long.valueOf(1354473L), result.getBlockIndex());
+        assertEquals(Long.valueOf(1000L), result.getTx0Expiration());
+        assertEquals(Long.valueOf(1000L), result.getTx1Expiration());
+        assertEquals(Long.valueOf(1355470L), result.getMatchExpireIndex());
+        assertEquals(Long.valueOf(10000L), result.getFeeFractionInt());
+        assertEquals("pending", result.getStatus());
     
     }
 
@@ -145,7 +144,7 @@ public class CounterpartyAPITest {
     public void getBetMatchExpirations1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBetMatchExpirations(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
         /* TODO: should be implemented */
         assertEquals("", result.getBetMatchId());
@@ -155,10 +154,10 @@ public class CounterpartyAPITest {
     }
 
     @Test
-    public void getBetMatchReqolutions1() throws Exception {
+    public void getBetMatchResolutions1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBetMatchResolutions(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
         /* TODO: should be implemented */
         assertEquals("", result.getBetMatchId());
@@ -194,7 +193,7 @@ public class CounterpartyAPITest {
     public void getBTCPays1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getBTCPays(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
         assertEquals(Long.valueOf(27275L), result.getTxIndex());
         assertEquals("4b13610eab2edf49ed719ff6a69fa6b7bd9c6e1771ff774f3cb2dc9714cb5aa4", result.getTxHash());
@@ -271,7 +270,7 @@ public class CounterpartyAPITest {
     public void getDestructions1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getDestructions(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
 
         assertEquals(Long.valueOf(0L), result.getTxIndex());
@@ -388,22 +387,17 @@ public class CounterpartyAPITest {
 
     @Test
     public void getMessages1() throws Exception {
-    }
-
-    @Test
-    public void getMessages2() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
-        var results = client.getMessages(2534262L);
-        assertEquals(0, results.size());
+        var results = client.getMessages(965451L);
+        assertEquals(3, results.size());
         
         var result = results.get(0);
-        assertEquals("", result.getMessageIndex());
-        assertEquals("", result.getBlockIndex());
-        assertEquals("", result.getCommand());
-        assertEquals("", result.getCategory());
-        assertEquals("", result.getBindings());
-        assertEquals("", result.getTimestamp());
-        assertEquals(Long.valueOf(0L), result.getTimestamp());
+        assertEquals(Long.valueOf(1236L), result.getMessageIndex());
+        assertEquals(Long.valueOf(965451L), result.getBlockIndex());
+        assertEquals("insert", result.getCommand());
+        assertEquals("broadcasts", result.getCategory());
+        assertEquals("{\"block_index\": 965451, \"fee_fraction_int\": 0, \"locked\": false, \"source\": \"n2T96WQMsY9jx8dPzczaEub9BGkpGXXs4C\", \"status\": \"valid\", \"text\": \"bet test\", \"timestamp\": 1602048540, \"tx_hash\": \"c167832a472dc09d00a83497fbe87153dd206e8600d6beb344058b41bd0a14ac\", \"tx_index\": 444, \"value\": -1.0}", result.getBindings());
+        assertEquals(Long.valueOf(1620608531L), result.getTimestamp());
     }
     
     @Test
@@ -492,7 +486,7 @@ public class CounterpartyAPITest {
     public void getRps1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRps(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
 
         assertEquals(Long.valueOf(0L), result.getTxIndex());
@@ -511,7 +505,7 @@ public class CounterpartyAPITest {
     public void getRpsExpirations1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRpsExpirations(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
 
         assertEquals(Long.valueOf(0L), result.getRpsIndex());
@@ -524,7 +518,7 @@ public class CounterpartyAPITest {
     public void getRpsMatches1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRpsMatches(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
 
         assertEquals("",result.getId());
@@ -551,7 +545,7 @@ public class CounterpartyAPITest {
     public void getRpsMatchExpirations1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRpsMatchExpirations(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
 
         assertEquals("", result.getRpsMatchId());
@@ -564,7 +558,7 @@ public class CounterpartyAPITest {
     public void getRpsResolves1() throws Exception {
         var client = CounterpartyAPIFactory.create("https://counterparty-testnet.api.monaparty.me/");
         var results = client.getRpsResolves(new Filter[0], null, null, null, 0L, Long.MAX_VALUE, null, 1L, 0L);
-        assertEquals(0, results.size());
+        assertEquals(1, results.size());
         var result = results.get(0);
 
         assertEquals(Long.valueOf(0L), result.getTxIndex());
