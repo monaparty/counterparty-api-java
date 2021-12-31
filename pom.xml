@@ -7,81 +7,46 @@
     <artifactId>counterparty-api-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.2</version>
-    </parent>
-
     <properties>
-        <spring.framework.version>5.3.13</spring.framework.version>
         <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
     
     <build>
         <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>2.22.1</version>
-            <configuration>
-            <useSystemClassLoader>false</useSystemClassLoader>
-            </configuration>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-site-plugin</artifactId>
-            <version>3.7.1</version>
-        </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-report-plugin</artifactId>
-            <version>2.22.1</version>
-        </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+                <configuration>
+                <useSystemClassLoader>true</useSystemClassLoader>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.7.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.22.1</version>
+            </plugin>
         </plugins>
     </build>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-mongodb</artifactId>
-            <version>3.3.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-releasetrain</artifactId>
-            <version>Neumann-SR9</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>com.github.ipfs</groupId>
-            <artifactId>java-ipfs-http-client</artifactId>
-            <version>v1.3.3</version>
-        </dependency>
-        <dependency>
             <groupId>com.github.briandilley.jsonrpc4j</groupId>
             <artifactId>jsonrpc4j</artifactId>
-            <version>1.5.1</version>
+            <version>1.6</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.22</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongodb-driver-sync</artifactId>
-            <version>4.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.briandilley.jsonrpc4j</groupId>
-            <artifactId>jsonrpc4j</artifactId>
-            <version>1.6</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
@@ -92,8 +57,13 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mock-server</groupId>
+            <artifactId>mockserver-junit-rule</artifactId>
+            <version>5.11.2</version>
         </dependency>
     </dependencies>
 
@@ -102,11 +72,13 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
-        <repository>
-            <id>spring-milestone</id>
-            <name>Spring Maven MILESTONE Repository</name>
-            <url>https://repo.spring.io/libs-milestone</url>
-        </repository>
     </repositories>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/monaparty/counterparty-api-java</url>
+		</repository>
+	</distributionManagement>
 </project>
