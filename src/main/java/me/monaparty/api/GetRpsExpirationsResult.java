@@ -5,18 +5,18 @@ import lombok.ToString;
 
 @Getter
 @ToString
-public class GetOrderExpirationsResult {
-    private Long order_index;
-    private String order_hash;
+public class GetRpsExpirationsResult {
+    private Long rps_index;
+    private String rps_hash;
     private String source;
     private Long block_index;
 
-    public Long getOrderIndex() {
-        return order_index;
+    public Long getRpsIndex() {
+        return rps_index;
     }
 
-    public String getOrderHash() {
-        return order_hash;
+    public String getRpsHash() {
+        return rps_hash;
     }
 
     public Long getBlockIndex() {

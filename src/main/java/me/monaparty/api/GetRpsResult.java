@@ -5,15 +5,21 @@ import lombok.ToString;
 
 @Getter
 @ToString
-public class GetBTCPaysResult {
+public class GetRpsResult {
     private Long tx_index;
     private String tx_hash;
     private Long block_index;
     private String source;
-    private String destination;
-    private Long btc_amount;
-    private String order_match_id;
+    private Long possible_moves;
+    private Long wager;
+    private String move_random_hash;
+    private Long expiration;
+    private Long expire_index;
     private String status;
+
+    public Long getExpireIndex() {
+        return expire_index;
+    }
 
     public Long getTxIndex() {
         return tx_index;
@@ -27,11 +33,11 @@ public class GetBTCPaysResult {
         return block_index;
     }
 
-    public Long getBtcAmount() {
-        return btc_amount;
+    public Long getPossibleMoves() {
+        return possible_moves;
     }
 
-    public String getOrderMatchId() {
-        return order_match_id;
+    public String getMoveRandomHash() {
+        return move_random_hash;
     }
 }

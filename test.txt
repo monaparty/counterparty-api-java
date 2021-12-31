@@ -1,0 +1,223 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for me.moanparty:counterparty-api-java:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.github.briandilley.jsonrpc4j:jsonrpc4j:jar -> version 1.5.1 vs 1.6 @ line 81, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -----------------< me.moanparty:counterparty-api-java >-----------------
+[INFO] Building counterparty-api-java 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ counterparty-api-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /projects/counterparty-api-java/src/main/resources
+[INFO] skip non existing resourceDirectory /projects/counterparty-api-java/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ counterparty-api-java ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ counterparty-api-java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /projects/counterparty-api-java/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ counterparty-api-java ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.1:test (default-test) @ counterparty-api-java ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running me.monaparty.api.e2e.CounterpartyAPITest
+23:47:02.772 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"96925511","jsonrpc":"2.0","method":"get_rps_expirations","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:02.971 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"96925511"}
+23:47:03.046 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"2027795528","jsonrpc":"2.0","method":"get_debits","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:03.194 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"quantity":0,"block_index":1165311,"address":"MJLYF6LZfmak2YREiVZF7eXwJ7QsDsMcG6","asset":"XMP","action":"issuance fee","event":"acaf57c10352a598df5699bbaccaf333970090fb76d8cf2e22daccc6faede32d"}],"id":"2027795528"}
+23:47:03.205 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"2047225348","jsonrpc":"2.0","method":"get_broadcasts","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:03.351 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"block_index":1165214,"text":"1BRxyPdLuoq7Nr1K7G8bVrXGszhC1Kmrgm","value":-1.0,"tx_hash":"6ae8a9bd6fb7a97a4ad1c5556bad152ff93c3c7650b0358e80a7d0460882bbc5","locked":0,"tx_index":3,"source":"MJL8CpXkQpzvGWyeLEnXk88cMDaMX1RtT2","timestamp":1511006460,"status":"valid","fee_fraction_int":0}],"id":"2047225348"}
+23:47:03.358 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"1875434964","jsonrpc":"2.0","method":"get_messages","params":{"block_index":2534262}}
+23:47:03.496 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"bindings":"{\"block_index\": 2534262, \"fee_fraction_int\": 0, \"locked\": false, \"source\": \"MNPDpmtfN7TkuHBCaAhQ7xJRDf6APanRGF\", \"status\": \"valid\", \"text\": \"@b.m {\\\"m\\\":\\\"\\u30e2\\u30ca\\u30ab\\u30fc\\u30c9\\u4f5c\\u308a\\u307e\\u3057\\u305f\\u3002\\\",\\\"p\\\":\\\"2MONAXMAS\\\"}\", \"timestamp\": 1640459288, \"tx_hash\": \"d87216f7909e0c61888e665825935208fc8cc8f093abf2e18c31e58114ff283b\", \"tx_index\": 324262, \"value\": -1.0}","message_index":1847703,"category":"broadcasts","block_index":2534262,"command":"insert","timestamp":1640459521},{"bindings":"{\"action\": \"open order\", \"address\": \"MKALhG58F9D57bowTBKknhgpysXLgBNN45\", \"asset\": \"MONANA\", \"block_index\": 2534262, \"event\": \"c0199e40cbd3e19da0eff81667299bdd6893e0a8540022ddead41c4a2545d69b\", \"quantity\": 1000000000}","message_index":1847704,"category":"debits","block_index":2534262,"command":"insert","timestamp":1640459521},{"bindings":"{\"block_index\": 2534262, \"expiration\": 15, \"expire_index\": 2534277, \"fee_provided\": 643, \"fee_provided_remaining\": 643, \"fee_required\": 0, \"fee_required_remaining\": 0, \"get_asset\": \"MPYEN\", \"get_quantity\": 1679, \"get_remaining\": 1679, \"give_asset\": \"MONANA\", \"give_quantity\": 1000000000, \"give_remaining\": 1000000000, \"source\": \"MKALhG58F9D57bowTBKknhgpysXLgBNN45\", \"status\": \"open\", \"tx_hash\": \"c0199e40cbd3e19da0eff81667299bdd6893e0a8540022ddead41c4a2545d69b\", \"tx_index\": 324263}","message_index":1847705,"category":"orders","block_index":2534262,"command":"insert","timestamp":1640459521}],"id":"1875434964"}
+23:47:03.517 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"1894864783","jsonrpc":"2.0","method":"get_dispenses","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:03.668 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"remaining":60,"must_give":1,"block_index":2145011,"destination":"M8Jz6et8crDE7oUnH7t4GUA4G5A35R7EvW","tx_hash":"9498d8e7d4c96e2ccd04c1287969e0b5a136607e7d1efd743b91abca77f317fc","dispenser_tx_hash":"aa328617c865a9734133c4d87ac7ef5ea6ef8e7731f510b2e064d84f2da19356","tx_index":111902,"source":"MJwAmVP2zrGCKEYMQMgXU5wY7yUPU1rXyc","asset":"A1366567895083264178","actually_given":1,"satoshirate":30000000}],"id":"1894864783"}
+23:47:03.678 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"1912370858","jsonrpc":"2.0","method":"get_rpsresolves","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:03.823 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"1912370858"}
+23:47:03.829 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"426078195","jsonrpc":"2.0","method":"get_rps_matches","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:03.966 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"426078195"}
+23:47:03.973 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"441660525","jsonrpc":"2.0","method":"get_sweeps","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:04.119 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"memo":null,"fee_paid":50000000,"block_index":2146540,"destination":"mona1qk9ecvx8n3ezrkrpczez88npvyycmaannkh7ll2","memo_hex":null,"tx_hash":"17f178941f77a73715ada84a597fa6cab52a826cd7cbe764ad66026d7ebfc4ff","flags":3,"tx_index":112846,"source":"MTPXv1Hireeb3DF5scUpFVamk9X2Lp8wKW","status":"valid"}],"id":"441660525"}
+23:47:04.126 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"466669204","jsonrpc":"2.0","method":"get_order_expirations","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:04.274 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"order_index":9,"order_hash":"11b859675a82f83a66c18552ca99f5efac1cadf1f1aa97523352b57661ce47e0","source":"MUqM2tDnZXtJ4h87W2g8fFz9nW3GsYhMfu","block_index":1166948}],"id":"466669204"}
+23:47:04.280 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"486483772","jsonrpc":"2.0","method":"get_triggers","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:04.436 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"486483772"}
+23:47:04.441 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"308345032","jsonrpc":"2.0","method":"get_order_match_expirations","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:04.595 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"tx0_address":"MQqQjTXjeJ874cKbvvC7N7jSswtJcvmQ2M","tx1_address":"MEw3MBSjzVcmizXR37xvXmHp8PPjcVuAQS","block_index":1166263,"order_match_id":"0c069fc660502dfff1421987de53fdceadfaef958d03f3ff5061efd667e3433f_d157c3596a06cc32aafb0907fb70b41127c9873df5e61fd2d75d345d40e9cc89"}],"id":"308345032"}
+23:47:04.630 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"369520107","jsonrpc":"2.0","method":"get_dispensers","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:04.787 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"give_remaining":0,"block_index":2145004,"satoshirate":100000000,"tx_hash":"60e05800e6ec78ed7c60fba7720a250a2c90d8c4a1d9fcf4c9061347da613e1b","give_quantity":1,"asset":"XABOVECLOWDS","source":"MGdFSDkJr7xq5e7GtDJaxkQmPraModaBcm","escrow_quantity":10,"tx_index":111892,"status":10}],"id":"369520107"}
+23:47:04.792 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"388372803","jsonrpc":"2.0","method":"get_credits","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:04.942 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"quantity":0,"block_index":1158657,"address":"MUj6ByMDqeKXSxF1TUyLBKDZKkRLuVzo3B","asset":"XMP","calling_function":"burn","event":"c3d89b611094cf8050fdf8f6add097e2424b1a64fc0d083a4e176b200e2d0629"}],"id":"388372803"}
+23:47:04.947 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"210234062","jsonrpc":"2.0","method":"get_bet_match_expirations","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:05.082 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"210234062"}
+23:47:05.087 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"232549498","jsonrpc":"2.0","method":"get_assetgroups","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:05.233 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"block_index":2323843,"asset_group":"cryptcoin.junkey@gmail.com","msg_index":0,"tx_index":157930,"owner":"MUqM2tDnZXtJ4h87W2g8fFz9nW3GsYhMfu","status":"valid","tx_hash":"5e9e23430caa1e8d9a4bbaf462032cf386a8c081390597ddb1d699bb3bfec82b"}],"id":"232549498"}
+23:47:05.241 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"302189049","jsonrpc":"2.0","method":"get_orders","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:05.386 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"fee_provided":64770,"fee_provided_remaining":64770,"fee_required_remaining":0,"give_asset":"A10000000011411403939","tx_hash":"11b859675a82f83a66c18552ca99f5efac1cadf1f1aa97523352b57661ce47e0","fee_required":0,"get_asset":"XMP","expire_index":1166947,"source":"MUqM2tDnZXtJ4h87W2g8fFz9nW3GsYhMfu","get_remaining":1000000000,"get_quantity":1000000000,"status":"expired","give_remaining":10000000000000000,"block_index":1165947,"give_quantity":10000000000000000,"tx_index":9,"expiration":1000}],"id":"302189049"}
+23:47:05.392 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"119048573","jsonrpc":"2.0","method":"get_rps","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:05.540 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"119048573"}
+23:47:05.548 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"138286018","jsonrpc":"2.0","method":"get_btcpays","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:05.691 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"block_index":1257229,"destination":"MUqM2tDnZXtJ4h87W2g8fFz9nW3GsYhMfu","btc_amount":6666667,"tx_hash":"4b13610eab2edf49ed719ff6a69fa6b7bd9c6e1771ff774f3cb2dc9714cb5aa4","order_match_id":"c8c73ef380e03c71a7dcc17721c03e0ca34519a2d0cad8798fc0128717bf9bad_aa3afcd31d1ebd7559c5d47ed0d4e8410503d8ad62a6fe7d4b9a7a20c32f72dc","tx_index":27275,"source":"MDqpveqsRuixTX5XH17DFZNo8MiJB9FPdP","status":"valid"}],"id":"138286018"}
+23:47:05.698 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"165410815","jsonrpc":"2.0","method":"get_burns","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:05.848 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"earned":0,"block_index":1158657,"tx_hash":"c3d89b611094cf8050fdf8f6add097e2424b1a64fc0d083a4e176b200e2d0629","burned":0,"tx_index":0,"source":"MUj6ByMDqeKXSxF1TUyLBKDZKkRLuVzo3B","status":"valid"}],"id":"165410815"}
+23:47:05.853 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"184455886","jsonrpc":"2.0","method":"get_assets","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:05.994 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"asset_id":"3939393939393939114","asset_name":"A3939393939393939114","asset_longname":null,"block_index":1165311,"asset_group":null}],"id":"184455886"}
+23:47:05.997 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"839106139","jsonrpc":"2.0","method":"get_balances","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:06.145 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"quantity":3272053609452944,"asset":"XMP","address":"MUj6ByMDqeKXSxF1TUyLBKDZKkRLuVzo3B"}],"id":"839106139"}
+23:47:06.149 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"859113082","jsonrpc":"2.0","method":"get_bet_expirations","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:06.304 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"859113082"}
+23:47:06.307 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"878735276","jsonrpc":"2.0","method":"get_sends","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:06.461 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"memo":null,"quantity":10000000000,"block_index":1166002,"destination":"MKZoGggUhN2vFeNMoeZ16g2ghhn4WWUKmn","memo_hex":null,"tx_hash":"a34f26551a66e0649b177ef348c2620f92e333bb0671623596e9b35990a403ea","msg_index":0,"tx_index":36,"source":"MCD4xGs5Tizx1D2NwUTTDhf2uWzaQJpht8","asset":"XMP","status":"valid"}],"id":"878735276"}
+23:47:06.466 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"699634663","jsonrpc":"2.0","method":"get_order_matches","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:06.602 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"tx0_index":121,"tx1_index":290,"tx0_hash":"11f97a66986de2bbf31b667be49da7a2c4b21f7ecbd130c784de9ad2128761be","match_expire_index":1166026,"tx1_hash":"19aa59e7ad72545d13b151a7f7ed4a97bc3102c2cafdf43c1e1e14578229cce1","tx0_address":"MP9nVeh5cc9y3vTThfMu2mvnXHJ952FdEV","tx1_address":"MP9nVeh5cc9y3vTThfMu2mvnXHJ952FdEV","tx0_expiration":1000,"status":"completed","tx0_block_index":1166003,"block_index":1166006,"backward_asset":"XMP","forward_quantity":1,"id":"11f97a66986de2bbf31b667be49da7a2c4b21f7ecbd130c784de9ad2128761be_19aa59e7ad72545d13b151a7f7ed4a97bc3102c2cafdf43c1e1e14578229cce1","tx1_expiration":1000,"fee_paid":0,"tx1_block_index":1166006,"backward_quantity":100000000,"forward_asset":"BURNKINEN"}],"id":"699634663"}
+23:47:06.607 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"722527222","jsonrpc":"2.0","method":"get_issuances","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:06.749 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"fee_paid":0,"reassignable":1,"listed":1,"transfer":0,"asset_longname":null,"tx_index":4,"call_date":0,"block_index":1165311,"asset":"A3939393939393939114","call_price":0.0,"quantity":3900000000,"tx_hash":"acaf57c10352a598df5699bbaccaf333970090fb76d8cf2e22daccc6faede32d","msg_index":0,"fungible":1,"divisible":1,"source":"MJLYF6LZfmak2YREiVZF7eXwJ7QsDsMcG6","description":"thankyouthankyou114","status":"valid","vendable":1,"callable":0,"locked":0,"issuer":"MJLYF6LZfmak2YREiVZF7eXwJ7QsDsMcG6"}],"id":"722527222"}
+23:47:06.753 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"792166773","jsonrpc":"2.0","method":"get_destructions","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:06.900 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"792166773"}
+23:47:06.904 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"622492508","jsonrpc":"2.0","method":"get_mempool","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:07.057 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","error":{"code":-32000,"data":{"args":["SQLError: no such column: block_index"],"message":"SQLError: no such column: block_index","type":"SQLError"},"message":"Server error"},"id":"622492508"}
+23:47:07.060 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"641537579","jsonrpc":"2.0","method":"get_bet_match_resolutions","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:07.215 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"641537579"}
+23:47:07.219 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"660197901","jsonrpc":"2.0","method":"get_dividends","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:07.366 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"fee_paid":40000,"block_index":1167062,"tx_hash":"c9f3d9ceae5756a74085d18f7b1688ab11d70b9a61dff829eeb7c6377e90ed64","quantity_per_unit":100000000,"dividend_asset":"A3423592924455264000","asset":"A8551282150372946000","source":"MH2kxCpkvQThv9m1vNTWMPyJ9eE1Cic3dU","tx_index":6272,"status":"valid"}],"id":"660197901"}
+23:47:07.370 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"673664112","jsonrpc":"2.0","method":"get_bets","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:07.529 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"673664112"}
+23:47:07.533 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"543618984","jsonrpc":"2.0","method":"get_rps_match_expirations","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:07.675 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"543618984"}
+23:47:07.677 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"571320905","jsonrpc":"2.0","method":"get_cancels","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:07.819 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[{"block_index":1166092,"offer_hash":"218f56e220fa2931c337dedcdcf7ea09a66277e871d49c98d44c1df697654dce","tx_hash":"6594f0fe2d6213c28850e42ca86f8f2fe258a96fa7f69d39c0ce8838deca4759","tx_index":1078,"source":"MJnzUC9aCoAhwcdbTnm2DzdPM25peGhdPJ","status":"valid"}],"id":"571320905"}
+23:47:07.823 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - Request {"id":"587095610","jsonrpc":"2.0","method":"get_bet_matches","params":{"filters":[],"filterop":null,"order_by":null,"order_dir":null,"start_block":0,"end_block":9223372036854775807,"status":null,"limit":1,"offset":0}}
+23:47:07.977 [main] DEBUG com.googlecode.jsonrpc4j.JsonRpcHttpClient - JSON-RPC Response: {"jsonrpc":"2.0","result":[],"id":"587095610"}
+[ERROR] Tests run: 34, Failures: 16, Errors: 2, Skipped: 0, Time elapsed: 6.204 s <<< FAILURE! - in me.monaparty.api.e2e.CounterpartyAPITest
+[ERROR] getRpsExpirations1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 1.173 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getRpsExpirations1(CounterpartyAPITest.java:514)
+
+[ERROR] getMessages2(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.172 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<3>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getMessages2(CounterpartyAPITest.java:397)
+
+[ERROR] getRpsResolves1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.147 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getRpsResolves1(CounterpartyAPITest.java:567)
+
+[ERROR] getRpsMatches1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.143 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getRpsMatches1(CounterpartyAPITest.java:527)
+
+[ERROR] getSweeps1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.154 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<1>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getSweeps1(CounterpartyAPITest.java:605)
+
+[ERROR] getOrderMatchExpirations1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.247 s  <<< ERROR!
+java.lang.reflect.UndeclaredThrowableException
+	at me.monaparty.api.e2e.CounterpartyAPITest.getOrderMatchExpirations1(CounterpartyAPITest.java:480)
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: 
+Unrecognized field "tx0_address" (class me.monaparty.api.GetOrderMatchExpirationsResult), not marked as ignorable (0 known properties: ])
+ at [Source: UNKNOWN; byte offset: #UNKNOWN] (through reference chain: java.util.ArrayList[0]->me.monaparty.api.GetOrderMatchExpirationsResult["tx0_address"])
+	at me.monaparty.api.e2e.CounterpartyAPITest.getOrderMatchExpirations1(CounterpartyAPITest.java:480)
+
+[ERROR] getBetMatchExpirations1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.138 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getBetMatchExpirations1(CounterpartyAPITest.java:148)
+
+[ERROR] getAssetGroups1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.148 s  <<< FAILURE!
+java.lang.AssertionError: expected:<0> but was:<157930>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getAssetGroups1(CounterpartyAPITest.java:29)
+
+[ERROR] getRps1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.159 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getRps1(CounterpartyAPITest.java:495)
+
+[ERROR] getBetExpirations1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.159 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getBetExpirations1(CounterpartyAPITest.java:100)
+
+[ERROR] getSends1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.159 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[a34f26551a66e0649b177ef348c2620f92e333bb0671623596e9b35990a403ea]>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getSends1(CounterpartyAPITest.java:589)
+
+[ERROR] getOrderMatches1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.143 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]> but was:<[MP9nVeh5cc9y3vTThfMu2mvnXHJ952FdEV]>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getOrderMatches1(CounterpartyAPITest.java:458)
+
+[ERROR] getDestructions1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.145 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getDestructions1(CounterpartyAPITest.java:274)
+
+[ERROR] getMempool1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.167 s  <<< ERROR!
+com.googlecode.jsonrpc4j.JsonRpcClientException: Server error
+	at me.monaparty.api.e2e.CounterpartyAPITest.getMempool1(CounterpartyAPITest.java:379)
+
+[ERROR] getBetMatchReqolutions1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.153 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getBetMatchReqolutions1(CounterpartyAPITest.java:161)
+
+[ERROR] getBets1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.164 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getBets1(CounterpartyAPITest.java:74)
+
+[ERROR] getRpsMatchExpirations1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.146 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getRpsMatchExpirations1(CounterpartyAPITest.java:554)
+
+[ERROR] getBetMatches1(me.monaparty.api.e2e.CounterpartyAPITest)  Time elapsed: 0.159 s  <<< FAILURE!
+java.lang.AssertionError: expected:<1> but was:<0>
+	at me.monaparty.api.e2e.CounterpartyAPITest.getBetMatches1(CounterpartyAPITest.java:114)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   CounterpartyAPITest.getAssetGroups1:29 expected:<0> but was:<157930>
+[ERROR]   CounterpartyAPITest.getBetExpirations1:100 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getBetMatchExpirations1:148 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getBetMatchReqolutions1:161 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getBetMatches1:114 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getBets1:74 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getDestructions1:274 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getMessages2:397 expected:<0> but was:<3>
+[ERROR]   CounterpartyAPITest.getOrderMatches1:458 expected:<[]> but was:<[MP9nVeh5cc9y3vTThfMu2mvnXHJ952FdEV]>
+[ERROR]   CounterpartyAPITest.getRps1:495 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getRpsExpirations1:514 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getRpsMatchExpirations1:554 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getRpsMatches1:527 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getRpsResolves1:567 expected:<1> but was:<0>
+[ERROR]   CounterpartyAPITest.getSends1:589 expected:<[]> but was:<[a34f26551a66e0649b177ef348c2620f92e333bb0671623596e9b35990a403ea]>
+[ERROR]   CounterpartyAPITest.getSweeps1:605 expected:<0> but was:<1>
+[ERROR] Errors: 
+[ERROR]   CounterpartyAPITest.getMempool1:379 » JsonRpcClient Server error
+[ERROR]   CounterpartyAPITest.getOrderMatchExpirations1:480 » UndeclaredThrowable
+[INFO] 
+[ERROR] Tests run: 34, Failures: 16, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.135 s
+[INFO] Finished at: 2021-12-30T23:47:08Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project counterparty-api-java: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /projects/counterparty-api-java/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

@@ -1,10 +1,10 @@
 package me.monaparty.api;
 
 import lombok.Getter;
-import lombok.Setter;
+import lombok.ToString;
 
-@Setter
 @Getter
+@ToString
 public class GetBetMatchesResult {
     private String id;
     private Long tx0_index;
@@ -30,4 +30,84 @@ public class GetBetMatchesResult {
     private Long match_expire_index;
     private Long fee_fraction_int;
     private String status;
+
+    public Long getTx0Index() {
+        return tx0_index;
+    }
+
+    public Long getBlockIndex() {
+        return block_index;
+    }
+
+    public Long getTx0Expiration() {
+        return tx0_expiration;
+    }
+
+    public Long getTx1Expiration() {
+        return tx1_expiration;
+    }
+
+    public Long getMatchExpireIndex() {
+        return match_expire_index;
+    }
+
+    public Long getFeeFractionInt() {
+        return fee_fraction_int;
+    }
+
+    public Long getTx1BlockIndex() {
+        return tx1_block_index;
+    }
+
+    public Long getTx0BlockIndex() {
+        return tx0_block_index;
+    }
+
+    public Long getBackwardQuantity() {
+        return backward_quantity;
+    }
+
+    public Long getForwardQuantity() {
+        return forward_quantity;
+    }
+
+    public Double getTargetValue() {
+        return target_value;
+    }
+
+    public Long getInitialValue() {
+        return initial_value;
+    }
+
+    public String getFeedAddress() {
+        return feed_address;
+    }
+
+    public Long getTx1BetType() {
+        return tx1_bet_type;
+    }
+
+    public Long getTx0BetType() {
+        return tx0_bet_type;
+    }
+
+    public String getTx1Address() {
+        return tx1_address;
+    }
+
+    public String getTx1Hash() {
+        return tx1_hash;
+    }
+
+    public Long getTx1Index() {
+        return tx1_index;
+    }
+
+    public String getTx0Address() {
+        return tx0_address;
+    }
+
+    public String getTx0Hash() {
+        return tx0_hash;
+    }
 }

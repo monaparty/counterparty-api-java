@@ -1,10 +1,10 @@
 package me.monaparty.api;
 
 import lombok.Getter;
-import lombok.Setter;
+import lombok.ToString;
 
-@Setter
 @Getter
+@ToString
 public class GetIssuancesResult {
     private Long tx_index;
     private Long msg_index;
@@ -28,4 +28,37 @@ public class GetIssuancesResult {
     private Long listed;
     private Long locked;
     private String asset_longname;
+
+    public Long getTxIndex() {
+        return tx_index;
+    }
+
+    public Long getMsgIndex() {
+        return msg_index;
+    }
+
+    public Long getFeePaid() {
+        return fee_paid;
+    }
+
+    public Long getCallPrice() {
+        return call_price;
+    }
+
+    public String getTxHash() {
+        return tx_hash;
+    }
+
+
+    public Long getBlockIndex() {
+        return block_index;
+    }
+
+    public Long getCallDate() {
+        return call_date;
+    }
+
+    public String getAssetLongname() {
+        return asset_longname;
+    }
 }

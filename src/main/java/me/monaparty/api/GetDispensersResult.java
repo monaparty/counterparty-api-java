@@ -1,10 +1,10 @@
 package me.monaparty.api;
 
 import lombok.Getter;
-import lombok.Setter;
+import lombok.ToString;
 
-@Setter
 @Getter
+@ToString
 public class GetDispensersResult {
     private Long tx_index;
     private String tx_hash;
@@ -16,4 +16,28 @@ public class GetDispensersResult {
     private Long satoshirate;
     private Long status;
     private Long give_remaining;
+
+    public Long getTxIndex() {
+        return tx_index;
+    }
+
+    public String getTxHash() {
+        return tx_hash;
+    }
+
+    public Long getBlockIndex() {
+        return block_index;
+    }
+
+    public Long getGiveQuantity() {
+        return give_quantity;
+    }
+
+    public Long getEscrowQuantity() {
+        return escrow_quantity;
+    }
+
+    public Long getGiveRemaining() {
+        return give_remaining;
+    }
 }

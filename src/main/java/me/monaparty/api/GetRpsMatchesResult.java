@@ -5,7 +5,7 @@ import lombok.ToString;
 
 @Getter
 @ToString
-public class GetOrderMatchesResult {
+public class GetRpsMatchesResult {
     private String id;
     private Long tx0_index;
     private String tx0_hash;
@@ -13,17 +13,16 @@ public class GetOrderMatchesResult {
     private Long tx1_index;
     private String tx1_hash;
     private String tx1_address;
-    private String forward_asset;
-    private Long forward_quantity;
-    private String backward_asset;
-    private Long backward_quantity;
+    private String tx0_move_random_hash;
+    private String tx1_move_random_hash;
+    private Long wager;
+    private Long possible_moves;
     private Long tx0_block_index;
     private Long tx1_block_index;
     private Long block_index;
     private Long tx0_expiration;
     private Long tx1_expiration;
     private Long match_expire_index;
-    private Long fee_paid;
     private String status;
 
     public Long getTx0Index() {
@@ -50,20 +49,16 @@ public class GetOrderMatchesResult {
         return tx1_address;
     }
 
-    public String getForwardAsset() {
-        return forward_asset;
+    public String getTx0MoveRandomHash() {
+        return tx0_move_random_hash;
     }
 
-    public Long getForwardQuantity() {
-        return forward_quantity;
+    public String getTx1MoveRandomHash() {
+        return tx1_move_random_hash;
     }
 
-    public String getBackwardAsset() {
-        return backward_asset;
-    }
-
-    public Long getBackwardQuantity() {
-        return backward_quantity;
+    public Long getPossibleMoves() {
+        return possible_moves;
     }
 
     public Long getTx0BlockIndex() {
@@ -72,7 +67,6 @@ public class GetOrderMatchesResult {
 
     public Long getTx1BlockIndex() {
         return tx1_block_index;
-
     }
 
     public Long getBlockIndex() {
@@ -86,13 +80,8 @@ public class GetOrderMatchesResult {
     public Long getTx1Expiration() {
         return tx1_expiration;
     }
-    
+
     public Long getMatchExpireIndex() {
         return match_expire_index;
     }
-    
-    public Long getFeePaid() {
-        return fee_paid;
-    }
-
 }

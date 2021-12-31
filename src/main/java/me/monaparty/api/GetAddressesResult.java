@@ -5,13 +5,12 @@ import lombok.ToString;
 
 @Getter
 @ToString
-public class GetDebitsResult {
-    private Long block_index;
+public class GetAddressesResult {
+
     private String address;
-    private String asset;
-    private Long quantity;
-    private String action;
-    private String event;
+    private Long options;
+
+    private Long block_index;
 
     public Long getBlockIndex() {
         return block_index;

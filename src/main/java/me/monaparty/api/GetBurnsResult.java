@@ -1,10 +1,10 @@
 package me.monaparty.api;
 
 import lombok.Getter;
-import lombok.Setter;
+import lombok.ToString;
 
-@Setter
 @Getter
+@ToString
 public class GetBurnsResult {
     private Long tx_index;
     private String tx_hash;
@@ -14,4 +14,15 @@ public class GetBurnsResult {
     private Long earned;
     private String status;
 
+    public Long getTxIndex() {
+        return tx_index;
+    }
+
+    public String getTxHash() {
+        return tx_hash;
+    }
+
+    public Long getBlockIndex() {
+        return block_index;
+    }
 }
